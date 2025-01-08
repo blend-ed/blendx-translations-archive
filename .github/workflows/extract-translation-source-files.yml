@@ -75,6 +75,7 @@ jobs:
               'frontend-app-learner-dashboard',
               'frontend-app-learner-record',
               'frontend-app-learning',
+              'frontend-app-dashboard',
               'frontend-app-staff-dashboard',
               'frontend-app-library-authoring',
               'frontend-app-ora',
