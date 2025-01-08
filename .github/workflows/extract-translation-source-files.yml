@@ -2,6 +2,10 @@
 # translation source files to the openedx-translations repository via an auto-merged pull
 # request.
 
+permissions:
+  contents: read
+  packages: read
+
 name: Extract Translation Source Files
 
 on:
@@ -352,7 +356,7 @@ jobs:
           repository: ${{ github.repository_owner }}/${{ matrix.repo }}
           ref: ${{ github.event.inputs.ref }}
           path: translations/${{ matrix.repo }}
-          token: ${{ secrets.PAT_TOKEN }}
+          token: ${{ secrets.GH_TOKEN }}
 
       # Sets up node/npm
       - name: setup node
