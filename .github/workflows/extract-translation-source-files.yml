@@ -361,11 +361,18 @@ jobs:
         with:
           node-version: 16
 
+      # Add npm configuration for blend-ed packages
+      - name: configure npm for blend-ed packages
+        run: |
+          echo "@blend-ed:registry=https://npm.pkg.github.com" >> ~/.npmrc
+          echo "//npm.pkg.github.com/:_authToken=${{ secrets.EDX_TRANSIFEX_BOT_GITHUB_TOKEN }}" >> ~/.npmrc
+
       # Extracts the translation source files
       - name: extract translation source files
         run: |
           cd translations/${{ matrix.repo }}
           make extract_translations
+
       # git adds only the translation source files, found in src/i18n/transifex_input.json
       - name: git add the translation source files
         id: add-sources
