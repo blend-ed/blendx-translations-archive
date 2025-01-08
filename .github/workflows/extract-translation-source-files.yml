@@ -206,6 +206,7 @@ jobs:
           repository: ${{ github.repository_owner }}/${{ matrix.repo }}
           ref: ${{ github.event.inputs.ref }}
           path: translations/${{ matrix.repo }}
+          token: ${{ secrets.EDX_TRANSIFEX_BOT_GITHUB_TOKEN }}
 
       - name: prepare the environment with edx-platform specific changes
         if: matrix.repo == 'edx-platform'
@@ -420,6 +421,7 @@ jobs:
           repository: ${{ github.repository_owner }}/${{ matrix.repository_config.repo }}
           ref: ${{ github.event.inputs.ref || matrix.repository_config.ref }}
           path: translations/${{ matrix.repository_config.repo }}
+          token: ${{ secrets.EDX_TRANSIFEX_BOT_GITHUB_TOKEN }}
 
       # Sets up Python
       - name: setup python
