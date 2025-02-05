@@ -203,7 +203,7 @@
   "tours.upgradeCheckpoint.title": "Unlock your course",
   "tours.weeklyGoalsCheckpoint.body": "Setting a goal makes you more likely to complete your course.",
   "tours.weeklyGoalsCheckpoint.title": "Set a course goal",
-  "tours.newUserModal.title": "{welcome} {siteName} course!",
+  "tours.newUserModal.title": "Al-Powered LMS that simplifies training with a world-class learning experience",
   "learning.effortEstimation.combinedEstimate": "{minutes} + {activities}",
   "learning.effortEstimation.activities": "{activityCount, plural, one {# activity} other {# activities}}",
   "learning.effortEstimation.minutesAbbreviated": "{minuteCount, plural, one {# min} other {# min}}",
